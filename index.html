@@ -3,20 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seok-Bong Lee</title>
+
+  <title>Seok-Bong Lee | Coastal Engineering</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #24303f;
+      line-height: 1.7;
+      background: #f7f9fb;
+    }
+
+    nav {
+      background: #123955;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav .name {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #123955, #28759b);
+      color: white;
+      padding: 90px 8%;
+    }
+
+    header h1 {
+      font-size: 46px;
+      margin: 0 0 10px;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    header p {
+      max-width: 700px;
+      margin-top: 24px;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 30px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 28px;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+    }
+
+    h2 {
+      color: #123955;
+      margin-top: 0;
+    }
+
+    .research-list {
+      padding-left: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #123955;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-right: 8px;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #28759b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #123955;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: block;
+      }
+
+      nav .links {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 14px 0 0;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Seok-Bong Lee</h1>
-  <p>Assistant Professor of Coastal Engineering</p>
-  <p>Salisbury University</p>
 
-  <h2>About Me</h2>
-  <p>
-    My research focuses on coastal sediment transport,
-    wave-current interactions, and seafloor morphology.
-  </p>
+  <nav>
+    <div class="name">Seok-Bong Lee</div>
 
-  <h2>Contact</h2>
-  <p>Email: your-email@salisbury.edu</p>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Seok-Bong Lee, Ph.D.</h1>
+    <h2>Assistant Professor of Coastal Engineering</h2>
+
+    <p>
+      Salisbury University
+    </p>
+
+    <p>
+      My research focuses on coastal sediment transport,
+      wave–current interactions, seafloor morphology,
+      and numerical modeling of coastal processes.
+    </p>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>
+        I am an Assistant Professor of Coastal Engineering at
+        Salisbury University. My work investigates the physical
+        processes governing sediment transport, bedform development,
+        and coastal morphology under waves and currents.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <ul class="research-list">
+        <li>Coastal sediment transport</li>
+        <li>Wave–current interactions</li>
+        <li>Seafloor ripples and bedforms</li>
+        <li>Coastal morphodynamics</li>
+        <li>Numerical and data-driven modeling</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+
+      <p>
+        A complete publication list will be added soon.
+      </p>
+
+      <a class="button" href="#">Google Scholar</a>
+      <a class="button" href="#">ORCID</a>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <p>
+        Courses include Coastal Engineering, Introduction to Coastal
+        Engineering, and Engineering Mechanics: Statics.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        Department of Physics and Engineering<br>
+        Salisbury University<br>
+        Salisbury, Maryland
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:your-email@salisbury.edu">
+          your-email@salisbury.edu
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Seok-Bong Lee
+  </footer>
+
 </body>
 </html>
