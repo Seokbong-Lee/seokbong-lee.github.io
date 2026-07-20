@@ -24,13 +24,14 @@
     }
 
     nav {
-      background: #123955;
+      background: #670000;
       padding: 16px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav .name {
@@ -50,26 +51,53 @@
     }
 
     header {
-      background: linear-gradient(135deg, #123955, #28759b);
+      background: #8a0000;
       color: white;
-      padding: 90px 8%;
+      padding: 70px 8%;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
     }
 
     header h1 {
+      margin: 0 0 12px;
       font-size: 46px;
-      margin: 0 0 10px;
+      line-height: 1.2;
+      color: white;
     }
 
     header h2 {
-      margin: 0;
+      margin: 0 0 28px;
       font-size: 22px;
       font-weight: normal;
+      color: white;
     }
 
     header p {
       max-width: 700px;
-      margin-top: 24px;
+      margin: 12px 0;
       font-size: 18px;
+    }
+
+    .profile-photo {
+      width: 420px;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      border: 4px solid white;
+      flex-shrink: 0;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
     }
 
     main {
@@ -84,10 +112,12 @@
       padding: 32px;
       border-radius: 10px;
       box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+      scroll-margin-top: 90px;
     }
 
-    header h2 {
-    color: white;
+    section h2 {
+      margin-top: 0;
+      color: #8a0000;
     }
 
     .research-list {
@@ -96,7 +126,7 @@
 
     .button {
       display: inline-block;
-      background: #123955;
+      background: #8a0000;
       color: white;
       padding: 10px 18px;
       border-radius: 5px;
@@ -106,19 +136,38 @@
     }
 
     .button:hover {
-      background: #28759b;
+      background: #670000;
+    }
+
+    #contact a {
+      color: #8a0000;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #123955;
+      background: #670000;
       color: white;
+    }
+
+    @media (max-width: 850px) {
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+      }
     }
 
     @media (max-width: 700px) {
       nav {
         display: block;
+        padding: 14px 24px;
       }
 
       nav .links {
@@ -126,41 +175,38 @@
       }
 
       nav a {
-        margin: 0 14px 0 0;
+        display: inline-block;
+        margin: 4px 14px 4px 0;
+      }
+
+      header {
+        padding: 55px 24px;
       }
 
       header h1 {
         font-size: 36px;
       }
+
+      header h2 {
+        font-size: 20px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .profile-photo {
+        height: 240px;
+      }
+
+      main {
+        padding: 35px 18px;
+      }
+
+      section {
+        padding: 25px;
+      }
     }
-
-    .hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.profile-photo {
-  width: 420px;
-  height: 380px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  border: 4px solid white;
-  flex-shrink: 0;
-}
-
-.hero-text h1 {
-  margin-top: 0;
-}
-
   </style>
 </head>
 
@@ -179,29 +225,32 @@
   </nav>
 
   <header>
-  <div class="hero-content">
+    <div class="hero-content">
 
-    <div class="hero-text">
-      <h1>Seok-Bong Lee, Ph.D.</h1>
-      <h2>Assistant Professor of Coastal Engineering</h2>
+      <div class="hero-text">
+        <h1>Seok-Bong Lee, Ph.D.</h1>
 
-      <p>
-        Department of Physics, Henson School of Science &amp; Technology
-      </p>
+        <h2>
+          Assistant Professor of Coastal Engineering
+        </h2>
 
-      <p>
-        Salisbury University
-      </p>
+        <p>
+          Department of Physics, Henson School of Science &amp; Technology
+        </p>
+
+        <p>
+          Salisbury University
+        </p>
+      </div>
+
+      <img
+        class="profile-photo"
+        src="profile.png"
+        alt="Seok-Bong Lee at the coast"
+      >
+
     </div>
-
-    <img
-      class="profile-photo"
-      src="profile.png"
-      alt="Seok-Bong Lee"
-    >
-
-  </div>
-</header>
+  </header>
 
   <main>
 
@@ -235,14 +284,23 @@
         A complete publication list will be added soon.
       </p>
 
-      <a class="button"
-     href="https://scholar.google.com/citations?hl=en&user=t0ieB24AAAAJ"
-     target="_blank"
-     rel="noopener noreferrer">Google Scholar</a>
-      <a class="button"
-     href="https://orcid.org/0000-0002-4741-6922"
-     target="_blank"
-     rel="noopener noreferrer">ORCID</a>
+      <a
+        class="button"
+        href="https://scholar.google.com/citations?hl=en&amp;user=t0ieB24AAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+
+      <a
+        class="button"
+        href="https://orcid.org/0000-0002-4741-6922"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ORCID
+      </a>
     </section>
 
     <section id="teaching">
@@ -274,7 +332,7 @@
   </main>
 
   <footer>
-    © 2026 Seok-Bong Lee
+    &copy; 2026 Seok-Bong Lee
   </footer>
 
 </body>
