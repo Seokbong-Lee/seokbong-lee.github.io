@@ -133,6 +133,37 @@
         font-size: 36px;
       }
     }
+
+    .hero-content {
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-photo {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid white;
+  flex-shrink: 0;
+}
+
+.hero-text h1 {
+  margin-top: 0;
+}
+
+    .hero-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+}
   </style>
 </head>
 
@@ -151,16 +182,29 @@
   </nav>
 
   <header>
-    <h1>Seok-Bong Lee, Ph.D.</h1>
-    <h2>Assistant Professor of Coastal Engineering</h2>
+  <div class="hero-content">
 
-    <p>
-      Department of Physics, Henson School of Science & Technology
-    </p>
-    <p>
-      Salisbury University
-    </p>
-  </header>
+    <img
+      class="profile-photo"
+      src="profile.png"
+      alt="Seok-Bong Lee"
+    >
+
+    <div class="hero-text">
+      <h1>Seok-Bong Lee, Ph.D.</h1>
+      <h2>Assistant Professor of Coastal Engineering</h2>
+
+      <p>
+        Department of Physics, Henson School of Science &amp; Technology
+      </p>
+
+      <p>
+        Salisbury University
+      </p>
+    </div>
+
+  </div>
+</header>
 
   <main>
 
