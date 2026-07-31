@@ -258,6 +258,54 @@
   margin: 0;
   color: #5b6573;
 }
+
+    .experience-item {
+  margin-bottom: 30px;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #24303f;
+  font-size: 19px;
+}
+
+.experience-date {
+  color: #6b7280;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.experience-organization {
+  margin: 4px 0 10px;
+  color: #8a0000;
+  font-weight: bold;
+}
+
+.experience-item p {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .experience-header {
+    display: block;
+  }
+
+  .experience-date {
+    display: block;
+    margin-top: 4px;
+  }
+}
   </style>
 </head>
 
@@ -269,6 +317,7 @@
     <div class="links">
       <a href="#about">About</a>
       <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
@@ -338,6 +387,47 @@
     <h3>B.S. in Civil and Environmental Engineering</h3>
     <p>
       Seoul National University, South Korea, 2016
+    </p>
+  </div>
+</section>
+
+    <section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Assistant Professor of Coastal Engineering</h3>
+      <span class="experience-date">August 2026–Present</span>
+    </div>
+
+    <p class="experience-organization">
+      Salisbury University, Salisbury, MD
+    </p>
+
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Postdoctoral Researcher</h3>
+      <span class="experience-date">2023–2026</span>
+    </div>
+
+    <p class="experience-organization">
+      The University of Southern Mississippi (U.S. Naval Research Laboratory Contractor),
+      Stennis Space Center, MS
+    </p>
+
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Graduate Research Assistant</h3>
+      <span class="experience-date">2018–2023</span>
+    </div>
+
+    <p class="experience-organization">
+      Oregon State University,
+      Corvallis, OR
     </p>
   </div>
 </section>
